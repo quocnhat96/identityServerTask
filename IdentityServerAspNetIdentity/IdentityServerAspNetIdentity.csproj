@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Quickstart\Consent\**" />
+    <Compile Remove="Quickstart\Device\**" />
+    <Compile Remove="Quickstart\Diagnostics\**" />
+    <Compile Remove="Views\Consent\**" />
+    <Compile Remove="Views\Device\**" />
+    <Compile Remove="Views\Diagnostics\**" />
+    <Content Remove="Quickstart\Consent\**" />
+    <Content Remove="Quickstart\Device\**" />
+    <Content Remove="Quickstart\Diagnostics\**" />
+    <Content Remove="Views\Consent\**" />
+    <Content Remove="Views\Device\**" />
+    <Content Remove="Views\Diagnostics\**" />
+    <EmbeddedResource Remove="Quickstart\Consent\**" />
+    <EmbeddedResource Remove="Quickstart\Device\**" />
+    <EmbeddedResource Remove="Quickstart\Diagnostics\**" />
+    <EmbeddedResource Remove="Views\Consent\**" />
+    <EmbeddedResource Remove="Views\Device\**" />
+    <EmbeddedResource Remove="Views\Diagnostics\**" />
+    <None Remove="Quickstart\Consent\**" />
+    <None Remove="Quickstart\Device\**" />
+    <None Remove="Quickstart\Diagnostics\**" />
+    <None Remove="Views\Consent\**" />
+    <None Remove="Views\Device\**" />
+    <None Remove="Views\Diagnostics\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Quickstart\Account\ExternalController.cs" />
+    <Compile Remove="Quickstart\Account\ExternalProvider.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\_ScopeListItem.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="identityserver4_log.txt" />
+    <None Remove="tempkey.rsa" />
+    <None Remove="updateUI.ps1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.7.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
+    
+    <PackageReference Include="IdentityServer4" Version="2.3.0" />
+    <PackageReference Include="IdentityServer4.AspNetIdentity" Version="2.3.0" />
+    
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4" PrivateAssets="all">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.6" PrivateAssets="All" />
+  </ItemGroup>
+</Project>
